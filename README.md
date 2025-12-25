@@ -22,13 +22,22 @@ Tech Stack
 - Maven
 
 ### Database Setup
-Create database
 
 Login to Postgres:
 ``` psql -U postgres ```
 
 Create database:
 ```CREATE DATABASE projectOne;```
+
+Alternatively, you may create a database with a different name.
+
+Configure database connection
+
+Update src/main/resources/application.properties with your PostgreSQL credentials and database name:
+
+```spring.datasource.url=jdbc:postgresql://localhost:5432/projectone```
+```spring.datasource.username=YOUR_USERNAME```
+```spring.datasource.password=YOUR_PASSWORD```
 
 
 ### Running the Application
