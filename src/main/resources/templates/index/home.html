@@ -3,8 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="/css/home_style.css">
 </head>
 <body>
     <h1 th:text="${shop.name}">SHOP NAME</h1>
+    <p th:text="${shop.openHours}">00:00</p>
+    <p th:text="${shop.closeHours}">00:00</p>
+
+    <div class="drink-grid">
+        <div th:each="drink : ${drinks}">
+            <img th:src="${drink.imgUrl}" th:alt="${drink.name}">
+            <h3 th:text="${drink.name}">Drink Name</h3>
+            <span th:text="${drink.price}">£00.00</span>
+        </div>
+    </div>
 </body>
 </html>
