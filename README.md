@@ -10,5 +10,4 @@ Includes a basic admin setup for updating drink details and shop information.
 - Practice manual role handling using simple boolean flags
 - Use Flyway migrations for schema changes and data seeding
 - Get comfortable with JPA entities, repositories, and lifecycle hooks
-- Design clean, minimal UI without frontend frameworks
 - Improve overall understanding of how a full-stack Java web app fits together
