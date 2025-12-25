@@ -1,4 +1,4 @@
-Just Chilling and Learning
+# Just Chilling and Learning
 
 A simple coffee shop web app that displays available drinks.
 Includes a basic admin setup for updating drink details and shop information.
