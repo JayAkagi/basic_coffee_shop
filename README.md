@@ -11,3 +11,27 @@ Includes a basic admin setup for updating drink details and shop information.
 - Use Flyway migrations for schema changes and data seeding
 - Get comfortable with JPA entities, repositories, and lifecycle hooks
 - Improve overall understanding of how a full-stack Java web app fits together
+
+
+### Local Setup Guide
+Tech Stack
+- Java 21
+- Spring Boot 4
+- PostgreSQL
+- Flyway
+- Maven
+
+### Database Setup
+Create database
+
+Login to Postgres:
+``` psql -U postgres ```
+
+Create database:
+```CREATE DATABASE projectOne;```
+
+
+### Running the Application
+
+From the project root:
+```mvn spring-boot:run```
