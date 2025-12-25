@@ -2,20 +2,46 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title th:text="${shop.name}">Coffee Shop</title>
     <link rel="stylesheet" href="/css/home_style.css">
 </head>
 <body>
-    <h1 th:text="${shop.name}">SHOP NAME</h1>
-    <p th:text="${shop.openHours}">00:00</p>
-    <p th:text="${shop.closeHours}">00:00</p>
 
-    <div class="drink-grid">
-        <div th:each="drink : ${drinks}">
-            <img th:src="${drink.imgUrl}" th:alt="${drink.name}">
-            <h3 th:text="${drink.name}">Drink Name</h3>
-            <span th:text="${drink.price}">£00.00</span>
-        </div>
+<header class="site-header">
+    <div class="header-inner">
+        <h1 th:text="${shop.name}">Coffee Shop Name</h1>
+        <nav>
+            <a th:if="${session.isAdmin}" href="/admin_panel">Admin Panel</a>
+            <a th:if="${session.userId == null}" href="/login">Login</a>
+            <form th:if="${session.userId != null}" method="post" action="/logout">
+                <button type="submit">Logout</button>
+            </form>
+        </nav>
     </div>
+</header>
+
+<main class="container">
+    <section class="shop-info">
+        <span>Open <strong th:text="${shop.openHours} + am">00:00</strong></span>
+        <span>Close <strong th:text="${shop.closeHours} + pm">00:00</strong></span>
+    </section>
+
+    <section class="menu">
+        <h2>Coffee</h2>
+
+        <div class="drink-grid">
+            <div class="drink-card" th:each="drink : ${drinks}">
+                <div class="image-wrapper">
+                    <img th:src="${drink.imgUrl}" th:alt="${drink.name}">
+                </div>
+                <div class="drink-info">
+                    <h3 th:text="${drink.name}">Drink Name</h3>
+                    <span th:text="${drink.price}">£0.00</span>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
 </body>
 </html>

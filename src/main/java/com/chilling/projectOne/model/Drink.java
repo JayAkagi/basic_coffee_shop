@@ -3,6 +3,7 @@ package com.chilling.projectOne.model;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
+import java.time.OffsetDateTime;
 
 @Entity
 @Table(name = "drinks")
@@ -23,6 +24,9 @@ public class Drink {
 
     @Column(nullable = false)
     private boolean isActive;
+
+    @Column(name = "created_at", nullable = false)
+    private OffsetDateTime createdAt;
 
     protected Drink(){}
 
@@ -76,5 +80,9 @@ public class Drink {
 
     public void setActive(boolean active) {
         isActive = active;
+    }
+
+    public OffsetDateTime getCreatedAt() {
+        return createdAt;
     }
 }
