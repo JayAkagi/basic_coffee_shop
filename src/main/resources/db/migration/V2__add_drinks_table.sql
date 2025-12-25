@@ -1,0 +1,8 @@
+CREATE TABLE drinks(
+    id BIGSERIAL PRIMARY KEY,
+    name VARCHAR(250) NOT NULL,
+    price DECIMAL(10,2) NOT NULL,
+    img_url TEXT,
+    is_active BOOLEAN NOT NULL DEFAULT TRUE,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW()
+);
