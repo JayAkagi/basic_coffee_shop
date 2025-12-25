@@ -35,9 +35,9 @@ Configure database connection
 
 Update src/main/resources/application.properties with your PostgreSQL credentials and database name:
 
-```spring.datasource.url=jdbc:postgresql://localhost:5432/projectone```
-```spring.datasource.username=YOUR_USERNAME```
-```spring.datasource.password=YOUR_PASSWORD```
+```spring.datasource.url=jdbc:postgresql://localhost:5432/projectone```<br>
+```spring.datasource.username=YOUR_USERNAME```<br>
+```spring.datasource.password=YOUR_PASSWORD```<br>
 
 
 ### Running the Application
