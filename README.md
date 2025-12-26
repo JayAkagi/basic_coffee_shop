@@ -46,5 +46,5 @@ From the project root:
 ```mvn spring-boot:run```
 
 
-### CURRENT STATE
+# CURRENT STATE
 ![img.png](img.png)
