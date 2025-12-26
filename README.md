@@ -44,3 +44,7 @@ Update src/main/resources/application.properties with your PostgreSQL credential
 
 From the project root:
 ```mvn spring-boot:run```
+
+
+### CURRENT STATE
+![img.png](img.png)
