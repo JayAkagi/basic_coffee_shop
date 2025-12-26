@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<header class="site-header">
+    <div class="header-inner">
+        <a th:text="${shop.name}" href="/">Shop Name</a>
+        <nav>
+            <a th:if="${session.isAdmin}" href="/admin_panel">Admin Panel</a>
+            <a th:if="${session.userId == null}" href="/login">Login</a>
+            <form th:if="${session.userId != null}" method="post" action="/logout">
+                <button type="submit">Logout</button>
+            </form>
+        </nav>
+    </div>
+    <div>
+        <span th:if="${user != null}"
+              th:text="|Logged in as: ${user.username}|">
+            Logged in as: username
+        </span>
+    </div>
+    <a href="/edit_user">Edit User</a>
+    <a href="/register">Register User</a>
+</header>
+
+</body>
+</html>

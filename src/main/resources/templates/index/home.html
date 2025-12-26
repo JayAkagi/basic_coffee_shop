@@ -9,7 +9,7 @@
 
 <header class="site-header">
     <div class="header-inner">
-        <h1 th:text="${shop.name}">Coffee Shop Name</h1>
+        <a th:text="${shop.name}" href="/">Shop Name</a>
         <nav>
             <a th:if="${session.isAdmin}" href="/admin_panel">Admin Panel</a>
             <a th:if="${session.userId == null}" href="/login">Login</a>

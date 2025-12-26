@@ -34,8 +34,6 @@ public class HomeController {
             shop = shops.get(0);
         }
 
-        System.out.println("Shops size: " + shops.size());
-        System.out.println("Drinks size: " + drinks.size());
         model.addAttribute("shop", shop);
         model.addAttribute("drinks", drinks);
 
